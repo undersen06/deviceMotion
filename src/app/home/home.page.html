@@ -1,0 +1,28 @@
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-title>
+      Device Motion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-segment mode="ios" (ionChange)="segmentChanged($event)" value="motion">
+    <ion-segment-button value="motion">
+      <ion-label>Motion</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="gyroscope">
+      <ion-label>Gyroscope</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-slides>
+    <ion-slide>
+      <app-hardware-chart #motion></app-hardware-chart>
+    </ion-slide>
+    <ion-slide>
+      <app-hardware-chart #gyroscope></app-hardware-chart>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

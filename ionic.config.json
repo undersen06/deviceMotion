@@ -1,0 +1,7 @@
+{
+  "name": "deviceMotion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
